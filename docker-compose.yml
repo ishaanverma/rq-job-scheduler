@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    restart: always
+    platform: linux/x86_64
+    ports:
+      - "6379:6379"
+    volumes:
+      - ./redis-data:/data
